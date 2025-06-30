@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizMaster | Testez vos connaissances</title>
+  <meta name="description" content="Testez vos connaissances avec notre quiz de culture générale interactif. Une expérience fluide et engageante pour défier votre esprit !">
+  <meta name="keywords" content="quiz, culture générale, test, connaissances, éducation, jeu, interactif, défi">
+  <meta name="author" content="Quiz Master Team">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="YOUR_WEBSITE_URL_HERE">
+  <meta property="og:title" content="QuizMaster | Testez vos connaissances">
+  <meta property="og:description" content="Testez vos connaissances avec notre quiz de culture générale interactif. Une expérience fluide et engageante pour défier votre esprit !">
+  <meta property="og:image" content="YOUR_IMAGE_URL_HERE.jpg">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="YOUR_WEBSITE_URL_HERE">
+  <meta property="twitter:title" content="QuizMaster | Testez vos connaissances">
+  <meta property="twitter:description" content="Testez vos connaissances avec notre quiz de culture générale interactif. Une expérience fluide et engageante pour défier votre esprit !">
+  <meta property="twitter:image" content="YOUR_IMAGE_URL_HERE.jpg">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="container">
+    <section id="quiz-selection" class="quiz-selection-card">
+      <div class="selection-header">
+        <h1 class="main-title">Choisissez votre Quiz !</h1>
+        <p class="subtitle">Sélectionnez une catégorie et une difficulté pour commencer</p>
+      </div>
+      <form id="selection-form" class="selection-form">
+        <div class="form-group">
+          <label for="category">Catégorie :</label>
+          <select id="category" name="category" class="form-control">
+            <option value="culture-generale">Culture Générale</option>
+            <option value="cuisine">Cuisine</option>
+            <option value="web-dev">Développement Web</option>
+            <option value="football">Football</option>
+            <option value="histoire">Histoire</option>
+            <option value="geographie">Géographie</option>
+            <option value="religion-islamique">Religion Islamique</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="difficulty">Difficulté :</label>
+          <select id="difficulty" name="difficulty" class="form-control">
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <span>Commencer le Quiz</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </section>
+
+    <section id="quiz-card" class="quiz-card hidden">
+      <div class="quiz-header">
+        <div class="progress-header">
+          <div class="timer">
+            <i class="fas fa-clock"></i>
+            <span id="time">05:00</span>
+          </div>
+          <div class="progress-info">
+            Question <span id="current-question-number">1</span> sur <span id="total-questions">10</span>
+          </div>
+        </div>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="question-container">
+        <h2 id="question-text"></h2>
+        <div id="answer-buttons" class="answer-buttons">
+          </div>
+      </div>
+
+      <div class="quiz-navigation">
+        <div class="quiz-stats">
+          <p>Score : <span id="score">0</span></p>
+          <p>Correctes : <span id="correct-count">0</span></p>
+          <p>Incorrectes : <span id="incorrect-count">0</span></p>
+        </div>
+        <div class="action-buttons">
+          <button class="btn btn-secondary" id="skip-btn">
+            <i class="fas fa-forward"></i>
+            <span>Passer</span>
+          </button>
+          <button class="btn btn-primary" id="check-answer-btn">
+            <i class="fas fa-check"></i>
+            <span>Vérifier</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="results-container" class="results-container hidden">
+      <div class="results-header">
+        <h2 class="main-title">Résultats du Quiz !</h2>
+        <p class="subtitle">Bravo, vous avez terminé le quiz !</p>
+      </div>
+      <div class="results-summary">
+        <div class="stat-item">
+          <i class="fas fa-star"></i>
+          <p>Score final : <span id="final-score">0</span></p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-check-circle"></i>
+          <p>Questions correctes : <span id="final-correct">0</span></p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-times-circle"></i>
+          <p>Questions incorrectes : <span id="final-incorrect">0</span></p>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-clock"></i>
+          <p>Temps écoulé : <span id="time-taken">00:00</span></p>
+        </div>
+      </div>
+      <div class="results-actions">
+        <button class="btn btn-primary" id="restart-btn">
+          <i class="fas fa-redo"></i>
+          <span>Recommencer</span>
+        </button>
+        <button class="btn btn-secondary" id="share-btn">
+          <i class="fas fa-share"></i>
+          <span>Partager</span>
+        </button>
+      </div>
+    </section>
+
+    <main class="toast hidden">
+      <div class="toast-content">
+        <i id="toast-icon" class="toast-icon fas"></i>
+        <span id="toast-message" class="toast-message"></span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 QuizMaster. Développé avec ❤️ pour l'apprentissage.</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link">À propos</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Confidentialité</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
