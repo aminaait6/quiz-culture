@@ -663,89 +663,165 @@ class QuizApplication {
         }
       ]
     },
-    'football': {
-      'facile': [
-        {
-          question: " Qui est surnommé 'CR7' ?",
-          answers: [" Messi", " Mbappé", "Cristiano Ronaldo", " Neymar"],
-          correct: "Cristiano Ronaldo"
-        },
-        {
-          question: " Quel pays a gagné la Coupe du monde 2018 ?",
-          answers: [" Allemagne", "France", " Brésil", "Italie"],
-          correct: "France"
-        },
-        {
-          question: " Combien de joueurs sur le terrain par équipe ?",
-          answers: [" 9", " 10", " 11", " 12"],
-          correct: "11"
-        },
-        {
-          question: " Quel pays a organisé la Coupe du monde 2022 ?",
-          answers: [" Qatar", "Russie", " Japon", " Espagne"],
-          correct: "Qatar"
-        },
-        {
-          question: " Quelle partie du corps ne peut pas toucher le ballon ? (hors gardien)",
-          answers: [" Pied", " Poitrine", " Main", "Tête"],
-          correct: "Main"
-        },
-        {
-          question: " Quel est le surnom de Lionel Messi ?",
-          answers: [" La Pulga", " El Tigre", "Le Roi", " L'Aigle"],
-          correct: "La Pulga"
-        },
-        {
-          question: "Quel club est basé à Barcelone ?", // Corrected missing options field
-          answers: [" Real Madrid", " Atlético", " FC Barcelone", " Sevilla"],
-          correct: "FC Barcelone"
-        },
-        {
-          question: " Quel joueur a porté le numéro 10 du Brésil ?",
-          answers: [" Zidane", " Neymar", " Ronaldo", " Salah"],
-          correct: "Ronaldo"
-        },
-        {
-          question: " Que signifie 'VAR' ?",
-          answers: [" Vidéo Assistant Referee", " Vitesse d'Attaque Rapide", " Valeur Athlétique Réduite", " Vision Alignée Rapide"],
-          correct: "Vidéo Assistant Referee"
-        },
-        {
-          question: " Quelle couleur a un carton d'avertissement ?",
-          answers: [" Rouge", " Bleu", " Jaune", " Vert"],
-          correct: "Jaune" // Corrected answer
-        },
-      ],
-      'moyen': [
-        {
-          question: " Quel club a gagné le plus de Ligues des Champions ?",
-          answers: [" Milan AC", " Barça", "Real Madrid", " Bayern"],
-          correct: "Real Madrid"
-        },
-        {
-          question: "Qui a marqué la 'main de Dieu' en 1986 ?",
-          answers: [" Pelé", " Ronaldo", " Maradona", " Zidane"],
-          correct: "Maradona"
-        },
-        {
-          question: " Quel poste occupe généralement un gardien ?",
-          answers: [" Défenseur", " Milieu", " Attaquant", " Goal"],
-          correct: "Goal"
-        },
-        {
-          question: " Que signifie 'hat-trick' ?",
-          answers: [" 3 passes", "3 tirs", "3 arrêts", " 3 buts "],
-          correct: "3 buts"
-        },
-        {
-          question: " En quelle année la France a-t-elle gagné sa première Coupe du Monde ?", // Completed question
-          answers: ["1990", "1998", "2002", "2010"],
-          correct: "1998"
-        }
-      ],
-      // ... (other categories and difficulties remain unchanged)
+   'football': {
+  'facile': [
+    {
+      question: "Qui est surnommé 'CR7' ?",
+      answers: ["Messi", "Mbappé", "Cristiano Ronaldo", "Neymar"],
+      correct: "Cristiano Ronaldo"
     },
-    'histoire': {
+    {
+      question: "Quel pays a gagné la Coupe du monde 2018 ?",
+      answers: ["Allemagne", "France", "Brésil", "Italie"],
+      correct: "France"
+    },
+    {
+      question: "Combien de joueurs sur le terrain par équipe ?",
+      answers: ["9", "10", "11", "12"],
+      correct: "11"
+    },
+    {
+      question: "Quel pays a organisé la Coupe du monde 2022 ?",
+      answers: ["Qatar", "Russie", "Japon", "Espagne"],
+      correct: "Qatar"
+    },
+    {
+      question: "Quelle partie du corps ne peut pas toucher le ballon ? (hors gardien)",
+      answers: ["Pied", "Poitrine", "Main", "Tête"],
+      correct: "Main"
+    },
+    {
+      question: "Quel est le surnom de Lionel Messi ?",
+      answers: ["La Pulga", "El Tigre", "Le Roi", "L'Aigle"],
+      correct: "La Pulga"
+    },
+    {
+      question: "Quel club est basé à Barcelone ?",
+      answers: ["Real Madrid", "Atlético", "FC Barcelone", "Sevilla"],
+      correct: "FC Barcelone"
+    },
+    {
+      question: "Quel joueur a porté le numéro 10 du Brésil ?",
+      answers: ["Zidane", "Neymar", "Ronaldo", "Salah"],
+      correct: "Ronaldo"
+    },
+    {
+      question: "Que signifie 'VAR' ?",
+      answers: ["Vidéo Assistant Referee", "Vitesse d'Attaque Rapide", "Valeur Athlétique Réduite", "Vision Alignée Rapide"],
+      correct: "Vidéo Assistant Referee"
+    },
+    {
+      question: "Quelle couleur a un carton d'avertissement ?",
+      answers: ["Rouge", "Bleu", "Jaune", "Vert"],
+      correct: "Jaune"
+    }
+  ],
+  'moyen': [
+    {
+      question: "Quel club a gagné le plus de Ligues des Champions ?",
+      answers: ["Milan AC", "Barça", "Real Madrid", "Bayern"],
+      correct: "Real Madrid"
+    },
+    {
+      question: "Qui a marqué la 'main de Dieu' en 1986 ?",
+      answers: ["Pelé", "Ronaldo", "Maradona", "Zidane"],
+      correct: "Maradona"
+    },
+    {
+      question: "Quel poste occupe généralement un gardien ?",
+      answers: ["Défenseur", "Milieu", "Attaquant", "Goal"],
+      correct: "Goal"
+    },
+    {
+      question: "Que signifie 'hat-trick' ?",
+      answers: ["3 passes", "3 tirs", "3 arrêts", "3 buts"],
+      correct: "3 buts"
+    },
+    {
+      question: "En quelle année la France a-t-elle gagné sa première Coupe du monde ?",
+      answers: ["1998", "2002", "1986", "2018"],
+      correct: "1998"
+    },
+    {
+      question: "Qui a entraîné Liverpool pendant la décennie 2020 ?",
+      answers: ["Guardiola", "Tuchel", "Klopp", "Mourinho"],
+      correct: "Klopp"
+    },
+    {
+      question: "Dans quel pays joue le club 'Ajax' ?",
+      answers: ["Belgique", "Pays-Bas", "Allemagne", "Suède"],
+      correct: "Pays-Bas"
+    },
+    {
+      question: "Quel trophée est attribué au meilleur buteur ?",
+      answers: ["Ballon d'Or", "Gant d'Or", "Soulier d'Or", "Trophée FIFA"],
+      correct: "Soulier d'Or"
+    },
+    {
+      question: "Combien de temps dure un match (hors prolongation) ?",
+      answers: ["60min", "75min", "90min", "120min"],
+      correct: "90min"
+    },
+    {
+      question: "Quel club portugais a révélé Cristiano Ronaldo ?",
+      answers: ["Porto", "Sporting", "Benfica", "Braga"],
+      correct: "Sporting"
+    }
+  ],
+  'difficile': [
+    {
+      question: "Quel gardien a remporté le Ballon d'Or ?",
+      answers: ["Buffon", "Neuer", "Yachine", "Casillas"],
+      correct: "Yachine"
+    },
+    {
+      question: "Combien de buts Klose a-t-il inscrits en Coupe du monde ?",
+      answers: ["14", "15", "16", "17"],
+      correct: "16"
+    },
+    {
+      question: "En quelle année ont été introduits les cartons rouges ?",
+      answers: ["1970", "1966", "1982", "1990"],
+      correct: "1970"
+    },
+    {
+      question: "Quel pays a remporté l'Euro 2004 ?",
+      answers: ["France", "Grèce", "Espagne", "Allemagne"],
+      correct: "Grèce"
+    },
+    {
+      question: "Qui a marqué en finale du Mondial 2006 contre la France (tir au but vainqueur) ?",
+      answers: ["Pirlo", "Totti", "Grosso", "Del Piero"],
+      correct: "Grosso"
+    },
+    {
+      question: "Quel joueur détient le record du plus grand nombre de sélections nationales ?",
+      answers: ["Ronaldo", "Buffon", "Ramos", "Cristiano Ronaldo"],
+      correct: "Cristiano Ronaldo"
+    },
+    {
+      question: "Quel club a gagné la Ligue des Champions en 2005 après une remontée mythique ?",
+      answers: ["Chelsea", "Milan", "Liverpool", "Barcelone"],
+      correct: "Liverpool"
+    },
+    {
+      question: "En quelle année a eu lieu la première Coupe du monde ?",
+      answers: ["1930", "1924", "1940", "1934"],
+      correct: "1930"
+    },
+    {
+      question: "Qui a remporté le Ballon d'Or 2006 ?",
+      answers: ["Cannavaro", "Zidane", "Ronaldinho", "Henry"],
+      correct: "Cannavaro"
+    },
+    {
+      question: "Quel est le seul pays à avoir participé à toutes les Coupes du monde ?",
+      answers: ["Allemagne", "France", "Brésil", "Italie"],
+      correct: "Brésil"
+    }
+  ]
+},
+     'histoire': {
   'facile': [
     {
       question: "Qui a découvert l'Amérique en 1492 ?",
@@ -1062,7 +1138,7 @@ class QuizApplication {
   ]
 },
 
-    'religion_islamique': {
+    'religion-islamique': {
   'facile': [
     {
       question: "Quel est le nom du dernier prophète de l'islam ?",
